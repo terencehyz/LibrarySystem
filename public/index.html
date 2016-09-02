@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="main">
+<head>
+    <title>内蒙古大学图书馆</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <link href="css/backstage.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+</head>
+<body>
+    <div class="head">
+            <a href="#/bookList"><div class="logo fl"></div></a>
+            <h3 class="head_text fr">内蒙古大学图书馆</h3>
+    </div>
+    <div class="operation_user clearfix" ng-controller="UserStateCtrl">
+        <div class="link fr">
+            <span ng-show="{{data.state}}">{{data.name}}欢迎使用</span>
+            <a href="#/login" class="icon icon_i" ng-hide="{{data.state}}">登陆</a>
+            <span></span>
+            <!-- <a href="#" class="icon icon_n">刷新</a>
+            <span></span> -->
+            <a href="#" class="icon icon_e" ng-click="logout()">退出</a>
+        </div>
+    </div>
+    <div class="content clearfix">
+        <div class="main">
+            <!--右侧内容-->
+            <div ng-view></div>
+        </div>
+        <!--左侧列表-->
+        <div class="menu" ng-controller="UserStateCtrl">
+            <div class="cont">
+                <div class="title">菜单</div>
+                <ul class="mList">
+                    <li>
+                        <a href="#/bookList"><h3>图书</h3></a>
+                        <dl>
+                            <dd><a href="#/byPress">出版社</a></dd>
+                            <dd><a href="#/byZTFL">中图分类号</a></dd>
+                            <dd><a href="#/byDate">出版时间</a></dd>
+                            <dd><a href="#/byAuthor">作者</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="#/lend"><h3>图书借阅</h3></a>
+                    </li>
+                    <li>
+                        <a href="#/reservation"><h3>图书预定</h3></a>
+                    </li>
+                    <li ng-show="{{data.isAdmin}}">
+                        <a href="#/adminUser"><h3>用户管理</h3></a>
+                    </li>
+                    <li ng-show="{{data.isAdmin}}">
+                        <a href="#/adminBook"><h3>图书管理</h3></a>
+                    </li>
+                    <li ng-show="{{data.isAdmin}}">
+                        <a href="#/adminAll"><h3>借阅信息</h3></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+<script src="js/lib/angular.js"></script>
+<script src="js/lib/angular-animate.js"></script>
+<script src="js/lib/angular-route.js"></script>
+<script src="js/lib/angular-touch.js"></script>
+<script src="js/lib/angular-resource.js"></script>
+<script src="js/lib/angular-loader.js"></script>
+<script src="js/lib/angular-imgcrop.js"></script>
+<script src="js/lib/angular-cookies.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/services.js"></script>
+<script src="js/directives.js"></script>
+</body>
+</html>

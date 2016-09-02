@@ -1,0 +1,27 @@
+<div class="cont">
+    <div class="title">借阅信息</div>
+    <div class="details">
+        
+        <!--表格-->
+        <table class="table" cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th width="20%">用户</th>
+                    <th width="20%">书籍</th>
+                    <th width="20%">开始时间</th>
+                    <th width="20%">结束时间</th>
+                    <th width="20%">ISBN</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="book in allAdmins">
+                    <td>{{book.UserId}}</td>
+                    <td>{{book.BookName}}</td>
+                    <td>{{book.StartTime}}</td>
+                    <td>{{book.EndTime}}</td>
+                    <td>{{book.ISBN}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="cont">
+    <div class="title">修改用户信息</div>
+    <div class="details">
+    	<div class="inner wrp">
+	    <div class="login_frame">
+	        <h3>用户信息</h3>
+	        <p>学号/教工号 {{data.Id}}</p>
+	        <p>类型 {{data.UserType}}</p>
+	        <form class="login_form" id="loginForm">
+	            <div class="login_input_panel" id="js_mainContent">
+	                <div class="login_input">
+	                    <i class="icon_login pwd"></i>
+	                    <input type="text" placeholder="密码" ng-model="data.Password">
+	                </div>
+	                <div class="login_input">
+	                    <i class="icon_login pwd"></i>
+	                    <input type="text" placeholder="真实姓名" ng-model="data.TrueName">
+	                </div>
+	                <div class="login_input">
+	                    <i class="icon_login pwd"></i>
+	                    <input type="text" placeholder="最大借阅数量" ng-model="data.MaxBookNum">
+	                </div>
+	            </div>
+	            <div class="login_btn_panel">
+	                <a class="btn_login" title="更新" ng-click="updateUser()">更新</a>
+	            </div>
+	        </form>
+	    </div>
+	</div>
+    </div>
+</div>

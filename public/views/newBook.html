@@ -1,0 +1,53 @@
+<div class="cont">
+    <div class="title">添加书籍</div>
+    <div class="details">
+    	<div class="inner wrp">
+	    <div class="login_frame">
+	        <h3>输入书籍信息</h3>
+	        <form class="login_form" id="loginForm">
+	            <div class="login_input_panel" id="js_mainContent">
+	                <div class="login_input">
+	                    <i class="icon_login un"></i>
+	                    <input type="text" placeholder="书籍名称" ng-model="data.bookName">
+	                </div>
+	                <div class="login_input">
+	                    <i class="icon_login pwd"></i>
+	                    <input type="text" placeholder="作者" ng-model="data.bookAuthor">
+	                </div>
+	                <div class="login_input">
+	                    <i class="icon_login pwd"></i>
+	                    <input type="text" placeholder="出版社"  ng-model="data.bookPress">
+	                </div>
+	                <div class="login_input">
+	                    <i class="icon_login pwd"></i>
+	                    <input type="text" placeholder="类别"  ng-model="data.bookCategory">
+	                </div>
+	                <div class="login_input">
+	                    <i class="icon_login pwd"></i>
+	                    <input type="text" placeholder="出版日期"  ng-model="data.ReleaseDate">
+	                </div>
+	                <div class="login_input">
+	                    <i class="icon_login pwd"></i>
+	                    <input type="text" placeholder="ISBN"  ng-model="data.bookISBN">
+	                </div>
+	                <div class="login_input">
+	                    <i class="icon_login pwd"></i>
+	                    <input type="text" placeholder="版本"  ng-model="data.bookVersion">
+	                </div>
+	                <div class="login_input">
+	                    <i class="icon_login pwd"></i>
+	                    <input type="text" placeholder="价格"  ng-model="data.bookPrice">
+	                </div>
+	                <div class="login_input">
+	                    <i class="icon_login pwd"></i>
+	                    <input type="text" placeholder="数量"  ng-model="data.bookNum">
+	                </div>
+	            </div>
+	            <div class="login_btn_panel">
+	                <a class="btn_login" title="提交" ng-click="addBook()">提交</a>
+	            </div>
+	        </form>
+	    </div>
+	</div>
+    </div>
+</div>

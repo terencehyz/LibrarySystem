@@ -1,0 +1,65 @@
+<div class="cont">
+    <div class="title">分类查询</div> 
+    <div class="details">
+        <div class="details_operation clearfix">
+            <div style="clear: both;">
+                <div class="inner wrp">
+                    <div class="login_frame">
+                        <h3>按出版社查询</h3>
+                        <form class="login_form" id="loginForm">
+                            <div class="login_input_panel" id="js_mainContent">
+                                <div class="login_input">
+                                    <i class="icon_login un"></i>
+                                    <input type="text" placeholder="出版社" ng-model="data.press">
+                                </div>
+                            </div>
+                            <div class="login_btn_panel">
+                                <a class="btn_login" title="点击搜索" ng-click="search()">搜索</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>       
+    </div>
+    
+    <div class="title">图书列表</div>
+    <div class="details">
+        <div class="details_operation clearfix"></div>
+        <!--表格-->
+        <table class="table" cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th width="4%">编号</th>
+                    <th width="4%">类别</th>
+                    <th width="13%">书名</th>
+                    <th width="11%">作者</th>
+                    <th width="10%">出版社</th>
+                    <th width="12%">ISBN</th>
+                    <th width="10%">版本</th>
+                    <th width="7%">价格</th>
+                    <th width="7%">总数</th>
+                    <th width="7%">剩余数量</th>
+                    <th width="15%">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="book in bookByPress">
+                    <td>{{book.BookId}}</td>
+                    <td>{{book.BookCategory}}</td>
+                    <td>{{book.BookName}}</td>
+                    <td>{{book.BookAuthor}}</td>
+                    <td>{{book.Press}}</td>
+                    <td>{{book.ISBN}}</td>
+                    <td>{{book.Version}}</td>
+                    <td>{{book.Price}}</td>
+                    <td>{{book.TotalNum}}</td>
+                    <td>{{book.FreeNum}}</td>
+                    <td align="center">
+                    <input type="button" value="借阅" class="btn" ng-hide="{{book.toLend}}" ng-click="lendOperation(book)">
+                    <input type="button" value="预约" class="btn" ng-hide="{{book.toRes}}" ng-click="reservationOperation(book)"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
